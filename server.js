@@ -13,17 +13,17 @@ hbs.registerHelper('getDate', () => {
 
 app.get("/", (req,res) => {
   res.render('home.hbs', {
-    welcomeMessage: 'welcomeMessage'
+    welcomeMessage: 'welcome Message'
   });
 });
 
 app.get("/about", (req,res) => {
-  res.send('A simple git test');
+  res.render('about.hbs');
 });
 
 app.get("/projects", (req,res) => {
-  res.send('projects page');
-}
+  res.render('projects.hbs');
+});
 
 app.get("/bad", (req,res) => {
   res.send({errorMessage: 'Cannot find this page!'});
